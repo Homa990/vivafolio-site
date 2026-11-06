@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /
+
+Sitemap: https://homa990.github.io/vivafolio-site/sitemap.xml
