@@ -1,15 +1,15 @@
 # Vivafolio
 
-> Vivafolio is a living art magazine shaped like an enchanted newspaper, made by the designer and art teacher Homa Mofidian. Framed portraits gossip, photographs breathe, a live moon calendar follows the real sky, horoscopes are written for painters (for fun), and original illustrated fairy tales for grown-ups are published as Tales for After Dark.
+> Vivafolio is a living art magazine shaped like an enchanted newspaper, made by the designer and art teacher Homa Mofidian. Framed portraits blink, breathe and move like little films inside their frames, a live moon calendar follows the real sky, horoscopes are written for painters (for fun), and original illustrated fairy tales for grown-ups are published as Tales for After Dark.
 
 ## Sections
 - [Front page](https://homa990.github.io/vivafolio-site/): the Midnight Gazette edition, with the live moon calendar and the Book of Moons
 - [Tales for After Dark](https://homa990.github.io/vivafolio-site/stories/): original fairy tales for grown-ups
-- [Chuchoté](https://homa990.github.io/vivafolio-site/chuchote/): the gossiping portraits Madame Vernisse, Dame Lazuli, Sir Viridian and Maestro Carmine
+- [Chuchoté](https://homa990.github.io/vivafolio-site/chuchote/): the living portraits Madame Vernisse, Dame Lazuli, Sir Viridian and Maestro Carmine, who move in their frames and talk to the reader
 - [Les Étoiles](https://homa990.github.io/vivafolio-site/les-etoiles/): horoscopes for artists, for fun
 - [The Celestial House](https://homa990.github.io/vivafolio-site/celestial-house/): the twelve signs
 
 ## Tales
 - [Letters from the Moon](https://homa990.github.io/vivafolio-site/stories/letters-from-the-moon/): A curious correspondence from beyond our skies. By Orion Belle.
 - [Inside the Brushmaker's Workshop](https://homa990.github.io/vivafolio-site/stories/inside-the-brushmakers-workshop/): Where wood remembers and brushes choose. By Mara Kingsley.
-- [Whispers After Midnight](https://homa990.github.io/vivafolio-site/stories/whispers-after-midnight/): What the night reveals when the crowds are gone. By Jasper Cale.
+- [The Night the Portraits Stepped Out](https://homa990.github.io/vivafolio-site/stories/whispers-after-midnight/): What the night reveals when the crowds are gone. By Jasper Cale.
