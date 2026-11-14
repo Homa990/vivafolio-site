@@ -4,7 +4,7 @@
 
 ## Sections
 - [Front page](https://homa990.github.io/vivafolio-site/): the Midnight Gazette edition, with the live moon calendar and the Book of Moons
-- [Tales for After Dark](https://homa990.github.io/vivafolio-site/stories/): original fairy tales for grown-ups
+- [Tales for After Dark](https://homa990.github.io/vivafolio-site/stories/): original fairy tales for grown-ups, and “Tales of the Stars”: every star story of The Living Star Atlas, to browse by people (Persian, Greek, Māori…) or by stars (Orion, the Pleiades, Venus…)
 - [Chuchoté](https://homa990.github.io/vivafolio-site/chuchote/): the living portraits Madame Vernisse, Dame Lazuli, Sir Viridian and Maestro Carmine, who move in their frames and talk to the reader
 - [Les Étoiles](https://homa990.github.io/vivafolio-site/les-etoiles/): horoscopes for artists, for fun
 - [The Celestial House](https://homa990.github.io/vivafolio-site/celestial-house/): the twelve signs
