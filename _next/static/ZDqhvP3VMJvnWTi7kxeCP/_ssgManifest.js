@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fstar-atlas\u002F[group]","\u002Fstar-atlas\u002F[group]\u002F[culture]","\u002Fstories\u002F[slug]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

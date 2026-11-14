@@ -1,0 +1,209 @@
+# The Vivafolio content panel (Sveltia CMS).
+# Open it at https://homa990.github.io/vivafolio-site/admin/  (on your computer: localhost:3000/vivafolio-site/admin/index.html)
+#
+# How it works: the panel edits the Markdown files in this project on GitHub. Each "Publish" is saved as a commit
+# on main, GitHub builds the site, and it goes live in two or three minutes. Before every build the content check
+# (scripts/check-content.mjs) looks for mistakes; if it finds one, nothing is published and the live site stays as it was.
+#
+# Sign in: "Sign In Using Access Token" with a fine-grained GitHub token that can reach ONLY Homa990/vivafolio,
+# with "Contents: Read and write" (see the README). Nothing is stored anywhere except in your own browser.
+
+backend:
+  name: github
+  repo: Homa990/vivafolio
+  branch: main
+  commit_messages:
+    create: 'Panel: add {{collection}} “{{slug}}”'
+    update: 'Panel: edit {{collection}} “{{slug}}”'
+    delete: 'Panel: remove {{collection}} “{{slug}}”'
+    uploadMedia: 'Panel: add picture “{{path}}”'
+    deleteMedia: 'Panel: remove picture “{{path}}”'
+
+site_url: https://homa990.github.io/vivafolio-site/
+display_url: https://homa990.github.io/vivafolio-site/
+logo:
+  src: ../icon.svg
+
+# New pictures go to public/images/tales and are written into the tales as /images/tales/…
+media_folder: public/images/tales
+public_folder: /images/tales
+
+# Every photo you upload is turned into a light WebP, at most 2000 pixels on its longest side.
+media_libraries:
+  default:
+    config:
+      max_file_size: 25000000
+      transformations:
+        raster_image:
+          format: webp
+          quality: 85
+          width: 2000
+          height: 2000
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  # ── The star tales: content/atlas/stories/<stars>-<people>.md ──
+  - name: tales
+    label: Star tales
+    label_singular: Star tale
+    description: The stories of The Living Star Atlas. They also appear on the Tales page, under “Tales of the Stars”.
+    folder: content/atlas/stories
+    extension: md
+    format: frontmatter
+    create: true
+    delete: true
+    slug: '{{fields.group}}-{{fields.culture}}'
+    identifier_field: title
+    summary: '{{title}}  ·  {{culture}}  ·  {{group}}'
+    sortable_fields: [title, group, culture]
+    editor:
+      preview: false
+    fields:
+      - name: hidden
+        label: Draft
+        widget: boolean
+        default: false
+        required: false
+        hint: Tick this to keep the tale hidden from the site while you work on it. Untick it when it is ready.
+      - { name: title, label: Title, widget: string }
+      - name: group
+        label: Which stars?
+        widget: select
+        options:
+          - { label: Orion, value: orion }
+          - { label: The Pleiades, value: pleiades }
+          - { label: The Great Bear, value: ursa-major }
+          - { label: Cassiopeia, value: cassiopeia }
+          - { label: Mercury, value: mercury }
+          - { label: Venus, value: venus }
+          - { label: Mars, value: mars }
+          - { label: Jupiter, value: jupiter }
+          - { label: Saturn, value: saturn }
+          - { label: The Seven Wanderers, value: wanderers }
+      - name: culture
+        label: Whose story?
+        widget: select
+        hint: Each people can tell one tale per group of stars. A new people must first be added to “cultures” in content/atlas.js (ask Claude).
+        options:
+          - { label: Persian, value: persian }
+          - { label: Greek, value: greek }
+          - { label: Egyptian, value: egyptian }
+          - { label: Sumerian, value: sumerian }
+          - { label: Arab, value: arabic }
+          - { label: Chinese, value: chinese }
+          - { label: Japanese, value: japanese }
+          - { label: Māori, value: maori }
+          - { label: Yolŋu, value: yolngu }
+          - { label: Aṉangu, value: anangu }
+          - { label: Martu, value: martu }
+          - { label: Kiowa, value: kiowa }
+          - { label: Lakota, value: lakota }
+          - { label: Mi’kmaq, value: mikmaq }
+          - { label: Sámi, value: sami }
+          - { label: Finnish, value: finnish }
+          - { label: Norse, value: norse }
+          - { label: Inca, value: inca }
+          - { label: Andean, value: andean }
+      - { name: people, label: The people, widget: string, hint: 'As written at the top of the tale, e.g. “The Persians, in the poetry of Nizami of Ganja”.' }
+      - { name: place, label: Place, widget: string, required: false }
+      - { name: told, label: Where the story comes from, widget: text, hint: 'The book, poem or tradition it comes from, and when.' }
+      - { name: teaser, label: Teaser, widget: text, hint: One or two sentences for the cards. Make the reader curious. }
+      - { name: minutes, label: Minutes to read, widget: number, value_type: int, min: 1, required: false, hint: Leave empty and it is worked out from the length. }
+      - { name: skyName, label: Their name for these stars, widget: string, required: false }
+      - { name: findTonight, label: Find it tonight, widget: text, required: false }
+      - { name: whoTells, label: Who tells this story, widget: text, required: false, hint: 'Who the storytellers are, and how we know the tale. Be careful and respectful with living cultures.' }
+      - { name: respect, label: A note of respect, widget: text, required: false, hint: 'Only if needed, e.g. for sacred stories.' }
+      - name: body
+        label: The story
+        widget: markdown
+        buttons: [bold, italic, link]
+        editor_components: []
+        hint: Leave an empty line between paragraphs. Pictures are placed after a paragraph number (see Pictures below).
+      - name: pictures
+        label: Pictures in the story
+        widget: list
+        required: false
+        summary: 'after paragraph {{fields.after}}: {{fields.caption}}'
+        fields:
+          - { name: src, label: Picture, widget: image, hint: 'Upload any photo: it becomes a light WebP by itself.' }
+          - { name: after, label: After paragraph number, widget: number, value_type: int, min: 1, hint: '1 = after the first paragraph.' }
+          - { name: alt, label: Description for blind readers, widget: text, hint: What can be seen in the picture. }
+          - { name: caption, label: Caption, widget: text, required: false }
+          - { name: credit, label: Credit, widget: string, hint: 'Artist, title, year · Museum (public domain)' }
+          - { name: source, label: Link to the original, widget: string, required: false }
+          - { name: w, label: Width (pixels), widget: number, value_type: int, required: false, hint: Leave empty. It is measured by itself. }
+          - { name: h, label: Height (pixels), widget: number, value_type: int, required: false, hint: Leave empty. It is measured by itself. }
+      - name: sources
+        label: Sources
+        widget: list
+        required: false
+        summary: '{{fields.text}}'
+        fields:
+          - { name: text, label: Source, widget: string }
+          - { name: url, label: Link, widget: string, required: false }
+      - name: gallery
+        label: In the gallery (artworks about this tale)
+        widget: list
+        required: false
+        summary: '{{fields.title}} · {{fields.artist}}'
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: artist, label: Artist, widget: string, required: false }
+          - { name: year, label: Year, widget: string, required: false }
+          - { name: where, label: Where it is, widget: string, required: false }
+          - { name: url, label: Link, widget: string, required: false }
+          - { name: publicDomain, label: Public domain, widget: boolean, default: false, required: false }
+          - { name: note, label: Note, widget: text, required: false }
+
+  # ── The star cards: what each group of stars (or planet) is, its names, how to find it ──
+  - name: stars
+    label: Star cards
+    label_singular: Star card
+    description: The card that opens when a reader taps a constellation or a planet in the sky.
+    folder: content/atlas/stars
+    extension: md
+    format: frontmatter
+    create: false
+    delete: false
+    identifier_field: name
+    summary: '{{name}}'
+    media_folder: /public/images/planets
+    public_folder: /images/planets
+    editor:
+      preview: false
+    fields:
+      - { name: group, label: Group, widget: hidden }
+      - { name: name, label: Name, widget: string }
+      - name: kind
+        label: Kind
+        widget: select
+        required: false
+        options:
+          - { label: Stars, value: stars }
+          - { label: Planet, value: planet }
+      - { name: plain, label: In plain words, widget: string, required: false, hint: 'e.g. “the red wanderer”' }
+      - name: picture
+        label: Picture (planets)
+        widget: object
+        required: false
+        fields:
+          - { name: src, label: Picture, widget: image, required: false }
+          - { name: alt, label: Description for blind readers, widget: string, required: false }
+          - { name: credit, label: Credit, widget: string, required: false }
+          - { name: source, label: Link to the original, widget: string, required: false }
+      - { name: days, label: Its day of the week, widget: text, required: false }
+      - name: alsoCalled
+        label: Also called
+        widget: list
+        required: false
+        summary: '{{fields.name}} ({{fields.who}})'
+        fields:
+          - { name: name, label: Name, widget: string }
+          - { name: who, label: By whom, widget: string, hint: 'The people or language, e.g. “Persian”. For a scholar, name their people: “al-Ṣūfī, the Persian astronomer (in Arabic)”.' }
+          - { name: meaning, label: Meaning, widget: string, required: false }
+      - { name: findTonight, label: Find it tonight, widget: text, required: false }
+      - { name: facts, label: Facts, widget: list, required: false, field: { name: fact, label: Fact, widget: text } }
+      - { name: body, label: Introduction, widget: markdown, buttons: [bold, italic, link], editor_components: [], required: false }

@@ -1,6 +1,6 @@
 # Vivafolio
 
-> Vivafolio is a living art magazine shaped like an enchanted newspaper, made by the designer and art teacher Homa Mofidian. Framed portraits blink, breathe and move like little films inside their frames, a live moon calendar follows the real sky, horoscopes are written for painters (for fun), and original illustrated fairy tales for grown-ups are published as Tales for After Dark.
+> Vivafolio is a living art magazine shaped like an enchanted newspaper, made by the designer and art teacher Homa Mofidian. Framed portraits blink, breathe and move like little films inside their frames, a live moon calendar follows the real sky, horoscopes are written for painters (for fun), original illustrated fairy tales for grown-ups are published as Tales for After Dark, and The Living Star Atlas shows the real night sky with the stories many cultures told about its stars.
 
 ## Sections
 - [Front page](https://homa990.github.io/vivafolio-site/): the Midnight Gazette edition, with the live moon calendar and the Book of Moons
@@ -8,8 +8,58 @@
 - [Chuchoté](https://homa990.github.io/vivafolio-site/chuchote/): the living portraits Madame Vernisse, Dame Lazuli, Sir Viridian and Maestro Carmine, who move in their frames and talk to the reader
 - [Les Étoiles](https://homa990.github.io/vivafolio-site/les-etoiles/): horoscopes for artists, for fun
 - [The Celestial House](https://homa990.github.io/vivafolio-site/celestial-house/): the twelve signs
+- [The Living Star Atlas](https://homa990.github.io/vivafolio-site/star-atlas/): the real sky above the reader tonight (computed in the browser for their time and place), with constellation lines, figures and traditional star stories from many cultures, each with its sources
 
 ## Tales
 - [Letters from the Moon](https://homa990.github.io/vivafolio-site/stories/letters-from-the-moon/): A curious correspondence from beyond our skies. By Orion Belle.
-- [Inside the Brushmaker's Workshop](https://homa990.github.io/vivafolio-site/stories/inside-the-brushmakers-workshop/): Where wood remembers and brushes choose. By Mara Kingsley.
+- [Inside the Brushmaker’s Workshop](https://homa990.github.io/vivafolio-site/stories/inside-the-brushmakers-workshop/): Where wood remembers and brushes choose. By Mara Kingsley.
 - [The Night the Portraits Stepped Out](https://homa990.github.io/vivafolio-site/stories/whispers-after-midnight/): What the night reveals when the crowds are gone. By Jasper Cale.
+
+## The Living Star Atlas
+Traditional star stories retold in English by Vivafolio, faithful to the named sources listed on each page. Stories of living Indigenous cultures follow only what those communities have shared publicly.
+
+### [Cassiopeia](https://homa990.github.io/vivafolio-site/star-atlas/cassiopeia/)
+- [The Hand Stained With Henna](https://homa990.github.io/vivafolio-site/star-atlas/cassiopeia/arabic/): a tale of the Arabs of the desert (Arab). Before the Greek queen arrived, the Arabs saw something else in these stars: one bright hand, painted for a celebration.
+- [The Charioteer Who Would Not Cheat](https://homa990.github.io/vivafolio-site/star-atlas/cassiopeia/chinese/): a tale of the Chinese (Chinese). The best charioteer in the land could have been rich. He chose to be honest, and ended up in the sky.
+- [The Queen Who Said Too Much](https://homa990.github.io/vivafolio-site/star-atlas/cassiopeia/greek/): a tale of the ancient Greeks (Greek). One boast about beauty brought a sea monster, a chained princess, a hero with a gorgon’s head, and a punishment that still turns in the sky.
+
+### [Jupiter](https://homa990.github.io/vivafolio-site/star-atlas/jupiter/)
+- [The Star That Counted the Years](https://homa990.github.io/vivafolio-site/star-atlas/jupiter/chinese/): a tale of the astronomers of ancient China (Chinese). The Chinese named every year by where Jupiter stood. Then they found it was slightly late, invented a shadow planet to fix it, and one of them may have seen something no one else would see for two thousand years.
+
+### [Mars](https://homa990.github.io/vivafolio-site/star-atlas/mars/)
+- [The Duke Who Would Not Pass On the Fire](https://homa990.github.io/vivafolio-site/star-atlas/mars/chinese/): a tale of the court astronomers and philosophers of ancient China (Chinese). The red planet of disaster stopped over his kingdom. His astrologer offered him three ways to pass the danger to someone else. The duke said no, three times.
+
+### [Mercury](https://homa990.github.io/vivafolio-site/star-atlas/mercury/)
+- [The Baby Who Was Too Quick for the Gods](https://homa990.github.io/vivafolio-site/star-atlas/mercury/greek/): a tale of the ancient Greeks (Greek). Born at dawn. Playing a lyre he had invented by noon. Stealing fifty of his brother’s cows by evening. The quickest god, and the quickest planet.
+
+### [Orion](https://homa990.github.io/vivafolio-site/star-atlas/orion/)
+- [The Brothers Who Could Never Meet](https://homa990.github.io/vivafolio-site/star-atlas/orion/chinese/): a tale of the Chinese (Chinese). Two princes who could not stop fighting were sent to opposite ends of the sky. Fifteen centuries later, a poet turned their exile into the saddest line in Chinese.
+- [The Star Who Brings Back the River](https://homa990.github.io/vivafolio-site/star-atlas/orion/egyptian/): a tale of the ancient Egyptians (Egyptian). Every summer the Nile came back to life, and the Egyptians knew who to thank: a giant of stars and the bright woman walking behind him.
+- [The Hunter and the Scorpion](https://homa990.github.io/vivafolio-site/star-atlas/orion/greek/): a tale of the ancient Greeks (Greek). He boasted that no creature on Earth could stand against him. The Earth heard.
+- [The Chief’s Hand](https://homa990.github.io/vivafolio-site/star-atlas/orion/lakota/): a tale of the Lakota (Lakota). A chief who would not share lost his arm to the Thunder beings. Only a boy born of a star could bring it back.
+- [The Canoe That Was Lifted Into the Sky](https://homa990.github.io/vivafolio-site/star-atlas/orion/yolngu/): a tale of the Yolŋu of Arnhem Land (Yolŋu). Three brothers, one forbidden fish, and the Sun-woman who saw everything.
+
+### [The Pleiades](https://homa990.github.io/vivafolio-site/star-atlas/pleiades/)
+- [The Storehouse That Forecasts the Rain](https://homa990.github.io/vivafolio-site/star-atlas/pleiades/andean/): a tale of Quechua and Aymara farmers of the Andes, heirs of the Inca (Andean). Every June, before dawn, farmers in the Andes climb a hill to look at seven small stars. They are deciding when to plant. Scientists did not believe it would work. It does.
+- [Seven Years of Running](https://homa990.github.io/vivafolio-site/star-atlas/pleiades/greek/): a tale of the ancient Greeks (Greek). Their father could not save them. His hands were busy holding up the sky.
+- [The Lady Who Made a List of Stars](https://homa990.github.io/vivafolio-site/star-atlas/pleiades/japanese/): a tale of the Japanese (Japanese). A thousand years ago, a lady at the Japanese court made a list of the things she found beautiful. At the top of her list of stars: Subaru.
+- [The Rock That Grew Into the Sky](https://homa990.github.io/vivafolio-site/star-atlas/pleiades/kiowa/): a tale of the Kiowa (Kiowa). Seven girls, a bear, and a rock that heard their prayer.
+- [The Eyes of the Wind](https://homa990.github.io/vivafolio-site/star-atlas/pleiades/maori/): a tale of Māori of Aotearoa New Zealand (Māori). A god who could not bear to watch his parents torn apart gave away his eyes, and gave his people a new year.
+- [The Sisters With the Digging Sticks](https://homa990.github.io/vivafolio-site/star-atlas/pleiades/martu/): a tale of the Martu of the Western Desert (Martu). A long walk across the desert, a band of men who should have known better, and seven sisters who did not need rescuing.
+
+### [Saturn](https://homa990.github.io/vivafolio-site/star-atlas/saturn/)
+- [The Father Who Swallowed His Children](https://homa990.github.io/vivafolio-site/star-atlas/saturn/greek/): a tale of the ancient Greeks, and the astronomers who inherited their names (Greek). The old king of the gods swallowed his children so that none could take his throne. Two thousand years later, through a telescope, his planet seemed to do it again.
+
+### [The Great Bear](https://homa990.github.io/vivafolio-site/star-atlas/ursa-major/)
+- [The Daughters Who Walk Around the Pole](https://homa990.github.io/vivafolio-site/star-atlas/ursa-major/arabic/): a tale of the Arabs of the desert, the Bedouin (Arab). A father lies on his bier. His daughters will not bury him until justice is done.
+- [Two Old Men Under the Mulberry Tree](https://homa990.github.io/vivafolio-site/star-atlas/ursa-major/chinese/): a tale of the Chinese (Chinese). A boy was told he would die at nineteen. A famous fortune-teller sent him to find two strangers playing a board game.
+- [The Bear Who Was Never Allowed to Bathe](https://homa990.github.io/vivafolio-site/star-atlas/ursa-major/greek/): a tale of the ancient Greeks (Greek). Her own son raised his spear against her. Only the king of the gods could stop his hand.
+- [Muin and the Seven Bird Hunters](https://homa990.github.io/vivafolio-site/star-atlas/ursa-major/mikmaq/): a tale of the Mi’kmaq (Mi’kmaq). A bear wakes in spring. Seven birds set off to hunt her. The hunt takes the whole year, and you can watch it happen.
+- [The Wagon That Drives Around the Pole](https://homa990.github.io/vivafolio-site/star-atlas/ursa-major/norse/): a tale of the Norse and the peoples of Scandinavia (Norse). In the North, the seven stars were never a bear. They were a wagon, and every child in Scandinavia still calls them that.
+
+### [Venus](https://homa990.github.io/vivafolio-site/star-atlas/venus/)
+- [The Woman Who Climbed Into the Sky](https://homa990.github.io/vivafolio-site/star-atlas/venus/persian/): a tale of Persian scholars, painters and poets (Persian). Two angels came down to Babylon to prove that they could resist what humans could not. Then a woman walked into their court, and asked them for a word.
+- [The Queen Who Went Down Into the Dark](https://homa990.github.io/vivafolio-site/star-atlas/venus/sumerian/): a tale of the Sumerians of ancient Iraq (Sumerian). The brightest star of the evening decided to visit the land from which no one returns. She took off her crown, her jewels, her robe, one gate at a time.
+
+### [The Seven Wanderers](https://homa990.github.io/vivafolio-site/star-atlas/wanderers/)
+- [The King of the Seven Domes](https://homa990.github.io/vivafolio-site/star-atlas/wanderers/persian/): a tale of the Persians, in the poetry of Nizami of Ganja (Persian). A king found seven portraits of seven princesses in a locked room. He married them all, and built each one a dome in the colour of a planet. Then, every day of the week, he listened to a story.
