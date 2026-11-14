@@ -45,6 +45,100 @@ slug:
   clean_accents: true
 
 collections:
+  # ── Tales for After Dark: Homa's own illustrated tales, one file each in content/tales/<slug>.yml ──
+  - name: after-dark
+    label: Tales for After Dark
+    label_singular: Tale
+    description: Your own illustrated tales on the Tales page (/stories). Build each story from blocks; the site gives every block its magic (the folding letter, moonlight ink, the gold quotes) by itself.
+    folder: content/tales
+    extension: yml
+    format: yaml
+    create: true
+    delete: true
+    slug: '{{fields.slug}}'
+    identifier_field: title
+    summary: '{{order}}. {{title}}  ·  by {{by}}'
+    sortable_fields: [order, title]
+    media_folder: /public/images/scenes
+    public_folder: /images/scenes
+    editor:
+      preview: false
+    fields:
+      - name: hidden
+        label: Draft
+        widget: boolean
+        default: false
+        required: false
+        hint: Tick this to keep the tale hidden from the site while you work on it.
+      - { name: order, label: Place in the list, widget: number, value_type: int, min: 1, default: 4, hint: '1 = first on the Tales page.' }
+      - { name: title, label: Title, widget: string }
+      - { name: slug, label: Web address, widget: string, pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Small letters, numbers and dashes only, e.g. the-owl-and-the-lamp'], hint: 'The end of its address: /stories/<this>/. Choose it once and do not change it later, or old links stop working.' }
+      - { name: italic, label: Words in italics in the title, widget: string, required: false, hint: 'Part of the title to set in italics, e.g. “from the” in “Letters from the Moon”.' }
+      - { name: kicker, label: Kicker, widget: string, hint: 'The small capitals above the title, e.g. “A Correspondence”.' }
+      - { name: deck, label: Deck (one line under the title), widget: string }
+      - { name: by, label: Written by, widget: string, hint: The narrator’s name. }
+      - { name: role, label: Their role, widget: string, hint: 'e.g. “Keeper of Undeliverable Letters, the Night Post House”.' }
+      - { name: minutes, label: Minutes to read, widget: number, value_type: int, min: 1 }
+      - { name: img, label: Main picture, widget: image, hint: 'The engraving at the top and on the Tales page. Upload any photo: it becomes a light WebP.' }
+      - { name: alt, label: Picture description for blind readers, widget: string }
+      - { name: caption, label: Picture caption, widget: text, required: false }
+      - { name: teaser, label: Teaser, widget: text, hint: 'The paragraph on the Tales page that makes readers want to open it.' }
+      - { name: epigraph, label: Epigraph, widget: string, required: false, hint: 'A short line in italics at the very top of the story.' }
+      - name: body
+        label: The story, block by block
+        label_singular: block
+        widget: list
+        hint: 'Add blocks in order. “Paragraph” is ordinary text; the others get their magic automatically.'
+        types:
+          - name: paragraph
+            label: Paragraph
+            widget: object
+            summary: '{{fields.text}}'
+            fields:
+              - { name: text, label: Text, widget: text }
+          - name: heading
+            label: Heading (with stars)
+            widget: object
+            summary: '✦ {{fields.text}}'
+            fields:
+              - { name: text, label: Heading, widget: string }
+          - name: quote
+            label: Pull quote (large, gold)
+            widget: object
+            summary: '“{{fields.text}}”'
+            fields:
+              - { name: text, label: Quote, widget: text }
+          - name: letter
+            label: Letter (envelope that unfolds)
+            widget: object
+            summary: '✉ {{fields.date}}'
+            fields:
+              - { name: date, label: Date line, widget: string, required: false }
+              - { name: text, label: The letter, widget: text }
+              - { name: sign, label: Signature, widget: string, required: false, default: '✦' }
+          - name: secret
+            label: Secret letter (moonlight ink, revealed by the wand)
+            widget: object
+            summary: '☾ {{fields.date}}'
+            fields:
+              - { name: date, label: Date line, widget: string, required: false }
+              - { name: text, label: The hidden letter, widget: text }
+              - { name: sign, label: Signature, widget: string, required: false }
+          - name: picture
+            label: Small engraving beside the text
+            widget: object
+            summary: '🖼 {{fields.alt}}'
+            fields:
+              - { name: src, label: Picture, widget: image, hint: 'Best with a transparent background (like the *-ink.webp engravings).' }
+              - { name: alt, label: Description for blind readers, widget: string }
+              - name: side
+                label: Side
+                widget: select
+                default: right
+                options:
+                  - { label: Right, value: right }
+                  - { label: Left, value: left }
+
   # ── The star tales: content/atlas/stories/<stars>-<people>.md ──
   - name: tales
     label: Star tales
